@@ -16,7 +16,7 @@ SPLIT_MARKER = f"SPL{1}T-TH{1}S-Pl3A5E"
 
 ENV_TORCH_HOME = 'TORCH_HOME'
 ENV_XDG_CACHE_HOME = 'XDG_CACHE_HOME'
-DEFAULT_CACHE_DIR = '~/.cache'
+DEFAULT_CACHE_DIR = os.getenv('GALACTICA_CACHE_DIR', '~/.cache')
 
 
 def _insert_split_marker(m: re.Match):
